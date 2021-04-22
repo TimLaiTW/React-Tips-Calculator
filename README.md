@@ -13,7 +13,7 @@ This app will show all you need.
 
 ### Imporvment
 
-Issue: nice, light and easy-to-use sales tax API is not exist.
+Issue: nice, light and easy-to-use sales tax API not exist.
 
 Solution: Hard coded a sales-tax-look-up-table for each states in the United States.
 
