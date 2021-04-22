@@ -8,10 +8,13 @@ Enter the
 1. total amount from your receipt. 
 2. (Optional!) the size of party.
 3. click on preferred tips percentage button.
+
 This app will show all you need.
 
 ### Imporvment
 
-Issue: nice, light and easy-to-use sales tax api is not exist.
+Issue: nice, light and easy-to-use sales tax API is not exist.
+
 Solution: Hard coded a sales-tax-look-up-table for each states in the United States.
+
 Imporvment: Might create one in the future. 
