@@ -1,6 +1,6 @@
 # Why would you tip on tax?
 
-this [React-Tips-Calculator](https://timlaitw.github.io/React-Tips-Calculator/) calculates the subtotal before approximate sales tax automatically based on you current location and display the tax, tips, total amount you need to pay and the amount for each person in your group.
+this [React-Tips-Calculator](https://timlaitw.github.io/React-Tips-Calculator/) calculates the subtotal before approximate sales tax automatically based on your current location and display the tax, tips, total amount and the amount for each person in your group.
 
 ## What do you need to do?
 
