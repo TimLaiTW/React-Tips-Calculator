@@ -85,14 +85,14 @@ class SalesTaxByState extends Component {
                     this.salesTaxbyState(this.state.usstate);
                 }
                 else{
-                    this.setState({error: result.error_message})
+                    this.setState({status: "not available"})
                 }
             }
         )
     };
 
     geoError = (error) => {
-        this.setState({status: error.message});
+        this.setState({status: "not available"});
     }
     
     salesTaxbyState = (stateCode) => {
