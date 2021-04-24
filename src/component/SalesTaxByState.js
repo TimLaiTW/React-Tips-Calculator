@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Alert } from '@material-ui/lab';
 const salesTaxLookUp = {
     "AL": 0.04,       
     "AK": 0.00,
@@ -97,21 +96,15 @@ class SalesTaxByState extends Component {
     
     salesTaxbyState = (stateCode) => {
         const res = salesTaxLookUp[stateCode];
-        {res ? this.setState({taxs: res}): this.setState({status: "not available"})}
-        
+        res ? this.setState({taxs: res}): this.setState({status: "not available"});
     }
 
     componentDidUpdate(){
-        if (this.props.getTaxs){
+        if (this.props.getTaxs)
             {this.state.taxs ? this.props.getTaxs(this.state.taxs) : this.props.getTaxErr(this.state.status)}
-        }
     }
 
-  render() {
-    return (
-        null
-        );
-    }
+  render() {    return null;  }
 }
 export default SalesTaxByState
 

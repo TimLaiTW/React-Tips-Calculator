@@ -3,6 +3,7 @@ import SalesTaxByState from './component/SalesTaxByState'
 import InputField from './component/InputField';
 import TipsGroup from './component/TipsGroup';
 import Calculator from './component/Calculator';
+import logo from './logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <label>Tips Calculator</label>
+        <label><img className="logo" src={ logo } alt="" />Tips tip</label>
         <SalesTaxByState 
           getTaxs = {taxs =>{
             setSalesTax(taxs)
