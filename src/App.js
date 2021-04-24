@@ -3,15 +3,12 @@ import SalesTaxByState from './component/SalesTaxByState'
 import InputField from './component/InputField';
 import TipsGroup from './component/TipsGroup';
 import Calculator from './component/Calculator';
-import logo from './logo.png';
+import tipsTip from './tips_tip.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-  const [showTotal, setShowTotal] = useState(false);
-  const [showPartition, setShowPartition] = useState(false);
   const [salesTax, setSalesTax] = useState(0);
-  const [taxErr, setTaxErr] = useState(null);
   const [totalAmount, setTotalAmount] = useState(0);
   const [tips, setTips] = useState(15);
   const [partition, setPartition] = useState(1);
@@ -19,14 +16,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <label><img className="logo" src={ logo } alt="" />Tips tip</label>
+        <img className="logo" src={ tipsTip } alt="" />
         <SalesTaxByState 
           getTaxs = {taxs =>{
             setSalesTax(taxs)
           }}
-          getTaxErr = {err => {
-            setTaxErr(err)
-          }}  
         />
         <InputField
           label="Total Amount"
@@ -34,9 +28,6 @@ function App() {
           active={false}
           onChange={amount => {
             setTotalAmount(amount)
-            if (amount){  
-              setShowTotal(true)  
-            }
           }}
         />
         <InputField
@@ -46,22 +37,18 @@ function App() {
           active={false}
           onChange={person => {
             setPartition(person)
-            if (person > 1){
-              setShowPartition(true)
-            }
           }}
         />
         <TipsGroup onChange={tips => {
           setTips(tips)
         }}/>
-        {showTotal ? 
+        {totalAmount ? 
           <Calculator 
             total={totalAmount} 
-            tax={salesTax}
-            taxErr={taxErr} 
+            tax={salesTax} 
             tips={tips} 
             person={partition} 
-            showPartition={showPartition}/> 
+            /> 
           : null
         }
       </header>

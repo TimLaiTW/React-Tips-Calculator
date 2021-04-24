@@ -56,7 +56,6 @@ class SalesTaxByState extends Component {
     constructor(){
         super();
         this.state = {
-            status: null,
             usstate: null,
             taxs: null
         };
@@ -68,7 +67,6 @@ class SalesTaxByState extends Component {
             timeOut: 20000,
             maxiumAge: 60
         };
-        this.setState({status: null});
         if (navigator.geolocation){
             navigator.geolocation.getCurrentPosition(this.geoSuccess, this.geoError, geoOptions)
         };
@@ -84,24 +82,24 @@ class SalesTaxByState extends Component {
                     this.salesTaxbyState(this.state.usstate);
                 }
                 else{
-                    this.setState({status: "not available"})
+                    this.setState({taxs: -1})
                 }
             }
         )
     };
 
-    geoError = (error) => {
-        this.setState({status: "not available"});
+    geoError = () => {
+        this.setState({taxs: -1});
     }
     
     salesTaxbyState = (stateCode) => {
         const res = salesTaxLookUp[stateCode];
-        res ? this.setState({taxs: res}): this.setState({status: "not available"});
+        res ? this.setState({taxs: res}): this.setState({taxs: -1});
     }
 
     componentDidUpdate(){
         if (this.props.getTaxs)
-            {this.state.taxs ? this.props.getTaxs(this.state.taxs) : this.props.getTaxErr(this.state.status)}
+            this.props.getTaxs(this.state.taxs)
     }
 
   render() {    return null;  }
