@@ -6,7 +6,7 @@ this [React-Tips-Calculator](https://timlaitw.github.io/React-Tips-Calculator/) 
 
 Enter the 
 1. total amount from your receipt. 
-2. (Optional!) the size of party.
+2. (Optional!) the size of party. (Default is one partition)
 3. click on preferred tips percentage button.
 
 This app will show all you need.
