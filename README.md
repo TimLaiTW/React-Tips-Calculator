@@ -2,6 +2,8 @@
 
 this [React-Tips-Calculator](https://timlaitw.github.io/React-Tips-Calculator/) calculates the subtotal before approximate sales tax automatically based on your current location and display the tax, tips, total amount and the amount for each person in your group.
 
+![image](https://github.com/TimLaiTW/React-Tips-Calculator/blob/main/tipstip.png)
+
 ## What do you need to do?
 
 Enter the 
